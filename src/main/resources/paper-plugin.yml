@@ -1,0 +1,26 @@
+name: Profiler
+version: 1.0.0-SNAPSHOT
+main: dev.elim.profiler.paper.PaperProfilerPlugin
+api-version: "1.21"
+authors: [Elim]
+description: Single-jar proxy and backend telemetry anticheat for Velocity and Paper.
+commands:
+  profiler:
+    description: Opens Profiler telemetry and control commands.
+    aliases: [ac]
+    usage: "/<command> [player|alerts|freeze|unfreeze|check|reload]"
+permissions:
+  profiler.use:
+    default: op
+  profiler.view:
+    default: op
+  profiler.alerts:
+    default: op
+  profiler.manage:
+    default: op
+  profiler.freeze:
+    default: op
+  profiler.check:
+    default: op
+  profiler.reload:
+    default: op

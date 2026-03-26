@@ -1,0 +1,72 @@
+settings:
+  active-alert-minutes: 25
+  archived-alert-limit: 25
+  overview-limit: 12
+  stack-broadcast-interval: 5
+  alerts-default-enabled: true
+  console-alerts: true
+  snapshot-interval-seconds: 15
+  probe-duration-seconds: 15
+  reconnect-window-seconds: 30
+  reconnect-threshold: 4
+  alt-account-threshold: 2
+  server-hop-window-seconds: 20
+  server-hop-threshold: 4
+thresholds:
+  click-warn-cps: 16
+  click-high-cps: 22
+  attack-warn-aps: 12
+  attack-high-aps: 17
+  reach-warn: 3.35
+  reach-high: 3.8
+  speed-warn: 0.82
+  speed-high: 1.02
+  rotation-warn: 95.0
+  rotation-high: 145.0
+  place-warn: 9.0
+  place-high: 14.0
+frozen:
+  allowed-commands:
+    - "/msg"
+    - "/r"
+    - "/reply"
+    - "/helpop"
+    - "/report"
+messages:
+  prefix: "<gray>[<gold>Profiler</gold>]</gray> "
+  no-permission: "{prefix}<red>You do not have permission to use this command.</red>"
+  active-header: "{prefix}<gold>Active risks</gold> <gray>({count})</gray>"
+  active-entry: "<gray>•</gray> <yellow>{player}</yellow> <gray>|</gray> <red>risk {risk}</red> <gray>|</gray> <white>{alert_count} alerts</white> <gray>|</gray> <aqua>{server}</aqua> <gray>|</gray> <white>{last_age} ago</white>"
+  active-empty: "{prefix}<green>No active risks are currently tracked.</green>"
+  player-header: "{prefix}<gold>{player}</gold> <gray>| risk</gray> <red>{risk}</red> <gray>| server</gray> <aqua>{server}</aqua> <gray>| frozen</gray> <white>{frozen}</white>"
+  player-summary: "<gray>Ping {ping}ms | Protocol {protocol} | Brand {brand} | Mods {mods}</gray>"
+  player-metrics: "<gray>CPS {cps_avg}/{cps_peak} | APS {aps} | Reach {reach_max} | Speed {speed_avg}/{speed_max} | Rot {rotation_max} | Place {place_rate}</gray>"
+  player-alert-entry: "<gray>•</gray> <red>{severity}</red> <white>{message}</white> <gray>{count_suffix} • {last_age} ago</gray>"
+  player-no-alerts: "{prefix}<gray>No alerts are stored for {player}.</gray>"
+  player-not-found: "{prefix}<red>That player is not tracked.</red>"
+  alerts-enabled: "{prefix}<green>Live staff alerts enabled.</green>"
+  alerts-disabled: "{prefix}<yellow>Live staff alerts disabled.</yellow>"
+  freeze-applied: "{prefix}<yellow>{player}</yellow> has been frozen."
+  freeze-removed: "{prefix}<green>{player}</green> has been unfrozen."
+  freeze-target-offline: "{prefix}<red>{player} is offline or not on a backend server.</red>"
+  freeze-self: "{prefix}<red>You cannot freeze yourself.</red>"
+  freeze-notice: "{prefix}<red>You are frozen for a staff check. Do not log out or attempt to evade.</red>"
+  freeze-chat-blocked: "{prefix}<red>You are frozen and cannot do that right now.</red>"
+  check-started: "{prefix}<gold>{type}</gold> probe started on <yellow>{player}</yellow>."
+  check-result: "{prefix}<gold>{type}</gold> probe finished for <yellow>{player}</yellow><gray>:</gray> <white>{summary}</white>"
+  reload-complete: "{prefix}<green>Profiler configuration reloaded.</green>"
+  usage: "{prefix}<gray>/ac [player]</gray> <dark_gray>|</dark_gray> <gray>/ac alerts <on|off></gray> <dark_gray>|</dark_gray> <gray>/ac freeze <player></gray> <dark_gray>|</dark_gray> <gray>/ac unfreeze <player></gray> <dark_gray>|</dark_gray> <gray>/ac check <live|movement|combat|build|clicks> <player></gray>"
+  alert-broadcast: "{prefix}<red>{player}</red> <gray>{code}</gray> <white>{message}</white> <gray>{count_suffix}</gray>"
+  alert-proxy-alt-account: "Shared address with {accounts} tracked accounts."
+  alert-proxy-reconnect-spike: "Rapid reconnect pattern: {joins} joins in {window}s."
+  alert-proxy-server-hop: "Moved across {hops} backend servers in {window}s."
+  alert-proxy-client-brand: "Client brand contains suspicious signature '{signature}'."
+  alert-proxy-mod-signature: "Mod list contains suspicious signature '{signature}'."
+  alert-movement-speed: "Horizontal speed {value} exceeded the {level} threshold."
+  alert-rotation-snap: "Rotation snap {value} exceeded the {level} threshold."
+  alert-autoclicker: "{value} CPS with low interval variance."
+  alert-reach: "Attack reach {value} exceeded the {level} threshold."
+  alert-attack-burst: "Attack burst {value} APS exceeded the {level} threshold."
+  alert-fast-place: "Placement burst {value} PPS exceeded the {level} threshold."
+  alert-scaffold-pattern: "Rapid under-foot placements while moving ({value} speed)."
+  alert-probe-result: "{type} probe: {summary}"
