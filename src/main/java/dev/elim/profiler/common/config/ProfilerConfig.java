@@ -100,7 +100,7 @@ public final class ProfilerConfig {
         Map<String, Object> thresholds = childMap(root, "thresholds");
         Map<String, Object> frozen = childMap(root, "frozen");
         Map<String, Object> rawMessages = childMap(root, "messages");
-        Map<String, String> messages = defaults().messages();
+        Map<String, String> messages = new LinkedHashMap<>(defaults().messages());
         for (Map.Entry<String, Object> entry : rawMessages.entrySet()) {
             messages.put(entry.getKey(), String.valueOf(entry.getValue()));
         }
