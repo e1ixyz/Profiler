@@ -87,7 +87,7 @@ mvn clean package
 The packaged jar is written to:
 
 ```text
-target/profiler-1.0.0-SNAPSHOT.jar
+target/profiler-1.0.1-SNAPSHOT.jar
 ```
 
 ## Notes

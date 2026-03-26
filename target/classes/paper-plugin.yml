@@ -1,5 +1,5 @@
 name: Profiler
-version: 1.0.0-SNAPSHOT
+version: 1.0.1-SNAPSHOT
 main: dev.elim.profiler.paper.PaperProfilerPlugin
 api-version: "1.21"
 authors: [Elim]

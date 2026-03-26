@@ -3,7 +3,7 @@ package dev.elim.profiler;
 public final class ProfilerConstants {
     public static final String PLUGIN_ID = "profiler";
     public static final String PLUGIN_NAME = "Profiler";
-    public static final String PLUGIN_VERSION = "1.0.0-SNAPSHOT";
+    public static final String PLUGIN_VERSION = "1.0.1-SNAPSHOT";
     public static final String CHANNEL = "profiler:main";
 
     public static final String PERMISSION_USE = "profiler.use";
